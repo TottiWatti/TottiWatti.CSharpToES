@@ -62,11 +62,7 @@ internal class Program
                 else if (string.IsNullOrEmpty(destDir))
                 {
                     Console.WriteLine("Error: Destination directory not specified");
-                }
-                else
-                {
-                    var result = StructureFilesParser.Parse(sourceDir, destDir);
-                }
+                }                
             }
             else
             {
