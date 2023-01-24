@@ -24,13 +24,15 @@ After project is compiled generate exe can be used for example from ASP.NET Core
 If project is, for example, saved to local folder C:\CSharpToES and compiled in debug mode and source C# model folder is C:\MyCsProject\Models and ES model output folder is C:\MyWebProject\js\Models
 conversion can be triggered from console by following command
 ```
-C:\CSharpToES\TottiWatti.CSharpToES\bin\Debug\net6.0\CSharpToES.exe C:\MyCsProject\Models C:\MyWebProject\js\Models
+C:\CSharpToES\CSharpToES\bin\Release\net6.0\CSharpToES.exe C:\MyCsProject\Models C:\MyWebProject\js\Models
 ```
 Compiled folder with CSharpToES.exe can of course be copied to easier local path.
 When used, for example, from ASP.NET Core project where C# models and ES models are within same solution source and target folders can be further automated to be independent of web project's local folder by adding conversion call in project's pre-build event like following
 ```
-C:\CSharpToES\TottiWatti.CSharpToES\bin\Debug\net6.0\CSharpToES.exe $(ProjectDir)Shared $(ProjectDir)wwwroot\src\shared 
+C:\CSharpToES\CSharpToES\bin\Release\net6.0\CSharpToES.exe $(ProjectDir)Shared $(ProjectDir)wwwroot\src\shared 
 ```
+CSharpToES creates file "CSharpToES.SourceFileModifyDateTimes.json" to output directory where source file date times are stored. If source file date time is same as  stored in json file conversion is unnecessary and not done.
+If you want to force conversion simply delete json file.
 
 ## Conversion format
 CSharpToES makes opionated c# to js model conversion. Simpliest way to convert C# model to ES model would be just blindly create properties with same name as in C# model at ES class constructor. 

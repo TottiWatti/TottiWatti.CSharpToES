@@ -63,9 +63,13 @@ namespace TottiWatti.CSharpToES
                     MakeConversion = (MakeConversion || LastWriteTime == null || fi.LastWriteTime != LastWriteTime);
                     FileInfos.Add(fi);
                 }
-#if DEBUG
-                MakeConversion = true;
-#endif
+
+                // when debugging always create js output files
+                if (System.Diagnostics.Debugger.IsAttached)
+                {
+                    MakeConversion = true;
+                }
+
                 if (!MakeConversion) { return 1; }
 
                 var structureFiles = new List<StructureFileModel>();

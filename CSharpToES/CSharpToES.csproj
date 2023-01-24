@@ -7,12 +7,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<Version>1.0.0</Version>
-	<Description>C# class/struct/record/enum to ES converter</Description>
+	<Description>C# class/struct/record/enum model to ES (EcmaScript) class converter</Description>
 	<Company>TottiWatti</Company>
 	
 	<PackAsTool>true</PackAsTool>
-	<ToolCommandName>csharptoes</ToolCommandName>
-	<PackageOutputPath>./nupkg</PackageOutputPath>
+	<ToolCommandName>csharptoes</ToolCommandName>	
 		
   </PropertyGroup>
 
