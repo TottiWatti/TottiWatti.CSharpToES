@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+  
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.0.0</Version>
+	<Description>C# class/struct/record/enum to ES converter</Description>
+	<Company>TottiWatti</Company>
+	
+	<PackAsTool>true</PackAsTool>
+	<ToolCommandName>csharptoes</ToolCommandName>
+	<PackageOutputPath>./nupkg</PackageOutputPath>
+		
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.1.0" />
+  </ItemGroup>  
+
+</Project>
