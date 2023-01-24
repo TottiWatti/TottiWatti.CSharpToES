@@ -141,7 +141,7 @@ namespace EsSpaTemplate.Shared
 Now there is lot of unnecessary comments but they are there for demonstration reason.
 As structure and enum definitions are in separate files they will be in separate files also at conversion results.
 Conversion result of WeatherForecast struct would be 
-```
+```javascript
 import { WeatherForecastSummary } from './WeatherForecastSummary.js';
 
 /** Weather forecast class definition */
@@ -279,7 +279,7 @@ export class WeatherForecast {
 }
 ```
 and conversion result of WeatherForecastSummary enum would be 
-```
+```javascript
 /**
 * Forecast feel enum definition
 * @readonly
