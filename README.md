@@ -1,18 +1,10 @@
 # CSharpToES
  C# class models to ES (ECMAScript) class models converter with JSDoc comment / type definition support using Roslyn code analysis
- 
- ### Table of contents
-* [General info](#general)
-* [Supported properties](#supported-properties)
-* [Setup](#setup)
-* [Conversion format](#conversion)
 
-<a name="general"/>
 ## General
 CSharpToES is a .NET Core console application to convert C# poco classes to ECMAScript classes with JSDoc comments and type definitions to use with JavaScript for example in ASP.NET Core program. Roslyn code analysis is used to parse code C# files.
 Application uses config file for setting C# source folder and ECMAScript destination folder. Source folder can contain multiple files and subfolders and output files are arranged with same structure.
-	
-<a name="supported-properties"/>
+
 ## Supported properties
 CSharpToES supports following properties:
 * Property values protection by using private fields for data and getter/setter for accessing it so that for example properties at ES side can be nulled only if they are nullable at C# side
@@ -24,7 +16,6 @@ CSharpToES supports following properties:
 * Custom JSON serializers and deserializers. Because data is stored in private fields at ES side, which are not serialized or deserialized by standard JSON parse and stringify
 * Numeric range attibutes to limit setting range on both sides
 	
-<a name="setup"/>
 ## Setup and debugging
 Download project and open in Visual Studio 2022. Project includes TestInput folder with test C# models to convert when debugging from Visual Studio.
 
@@ -41,7 +32,6 @@ When used, for example, from ASP.NET Core project where C# models and ES models 
 C:\CSharpToES\TottiWatti.CSharpToES\bin\Debug\net6.0\CSharpToES.exe $(ProjectDir)Shared $(ProjectDir)wwwroot\src\shared 
 ```
 
-<a name="conversion"/>
 ## Conversion format
 CSharpToES makes opionated c# to js model conversion. Simpliest way to convert C# model to ES model would be just blindly create properties with same name as in C# model at ES class constructor. 
 Standard js serialization and deserialization would be work out of the box between models. However this way properties are not protected as nothing would prevent js code to write variable of any type and any value to property.
